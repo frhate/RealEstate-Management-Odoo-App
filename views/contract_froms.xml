@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_property_contract_form" model="ir.ui.view">
+        <field name="name">property_contract_form</field>
+        <field name="model">property.contract</field>
+        <field name="arch" type="xml">
+           <form String="Property Contract">
+
+                <sheet string="Property Contract">
+                    <field name="kanban_state" widget="state_selection"/>
+                    <widget name="web_ribbon" text="Archived" bg_color="text-bg-danger" invisible="active"/>
+                    <field name="active" invisible="1"/>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" required="1" placeholder="Name..."/>
+                        </h1>
+                    </div>
+                    <group name="studio_group_3560bb">
+                        <group name="unit_info" string="Unit Info">
+                            <field name="code"/>
+                            <field name="company_id" groups="base.group_multi_company" options="{'no_create': True}"/>
+                            <field name="partner_id"/>
+                            <field name="user_id" widget="many2one_avatar_user"/>
+
+                        </group>
+                        <group name="contract_dates" string="Contract Dates">
+                            <field name="date"/>
+                            <field name="date_start" string="Dates" widget="daterange" options="{'end_date_field': 'date_stop'}"/>
+                            <field name="date_stop" invisible="1"/>
+
+
+                        </group>
+                    </group>
+                    <group name="studio_group_4b9_1hpq9o3pl">
+                        <group name="contact_pricing" string="Pricing">
+                            <field name="period"/>
+                            <field name="period_nbr"/>
+                            <field name="currency_id" invisible="1"/>
+                            <field name="value"/>
+                        </group>
+                        <group name="studio_group_4b9_right"/>
+                    </group>
+                    <group string="Notes">
+                        <field name="notes" placeholder="Type down your notes here..." nolabel="1" colspan="2"/>
+                    </group>
+                </sheet>
+
+            </form>
+            </field>
+        </record>
+    </odoo>

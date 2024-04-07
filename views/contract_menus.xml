@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Define menu -->
+    <menuitem id="menu_property_management" name="Property Management" sequence="10"/>
+
+    <!-- Define actions for Project -->
+    <record id="action_project_info_tree" model="ir.actions.act_window">
+        <field name="name">Projects</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">projecto.project_info</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="action_project_info_form" model="ir.actions.act_window">
+        <field name="name">New Project</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">projecto.project_info</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    <!-- Assign actions to the menu items for Project -->
+    <menuitem id="menu_project_info_action" name="Projects" parent="menu_property_management" action="action_project_info_tree"/>
+
+    <record id="action_unit_info_tree" model="ir.actions.act_window">
+        <field name="name">Units</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">property.unit</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_unit_action" name="Units" parent="menu_property_management" action="action_unit_info_tree"/>
+
+
+    <record id="action_contract_info_tree" model="ir.actions.act_window">
+        <field name="name">Contracts</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">property.contract</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_contract_action" name="Contract" parent="menu_property_management" action="action_contract_info_tree"/>
+
+
+
+    <!-- Define actions for Building -->
+    <record id="action_building_tree" model="ir.actions.act_window">
+        <field name="name">Buildings</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">property.building</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="action_building_form" model="ir.actions.act_window">
+        <field name="name">New Building</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">property.building</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    <!-- Assign actions to the menu items for Building -->
+    <menuitem id="menu_building_action" name="Buildings" parent="menu_property_management" action="action_building_tree"/>
+    <menuitem id="menu_setting_action" name="Settings" parent="menu_property_management" />
+
+
+
+     <menuitem id="setting_menu"
+            name="Settings"
+            sequence="10">
+
+            <menuitem id="menu_hold"
+                name="Hold type"
+                sequence="10"/>
+
+            <menuitem id="usage_menu"
+                name="Building Usage"
+                sequence="20"/>
+
+
+
+        </menuitem>
+
+</odoo>
+

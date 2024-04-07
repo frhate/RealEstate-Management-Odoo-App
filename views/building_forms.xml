@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_property_building_form" model="ir.ui.view">
+        <field name="name">property_building_form</field>
+        <field name="model">property.building</field>
+        <field name="arch" type="xml">
+            <form string="Property Building">
+                 <sheet>
+                <group>
+                    <field name="name"/>
+                    <field name="state_id"/>
+                    <field name="land_no_id"/>
+                    <field name="municipality_no"/>
+                    <field name="building_name"/>
+                    <field name="arabic_name"/>
+                    <field name="ejari_building_name"/>
+                    <field name="ejari_building_name_arabic"/>
+                    <field name="ejari_building_area_size"/>
+                    <field name="ejari_common_area_size"/>
+                    <field name="ejari_leasable_area_size"/>
+                </group>
+                <group>
+                    <field name="address"/>
+                    <field name="unit_count"/>
+                    <field name="completion_date"/>
+                    <field name="floor_count"/>
+                    <field name="parking_count"/>
+                    <field name="buid_area_size"/>
+                    <field name="plot_area_size"/>
+                    <field name="leasable_area_size"/>
+                    <field name="status"/>
+                    <field name="reference_number"/>
+                    <field name="approval_ref_no"/>
+                    <field name="active"/>
+                </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_unit_info_form" model="ir.ui.view">
+        <field name="name">unit.form</field>
+        <field name="model">property.unit</field>
+        <field name="arch" type="xml">
+            <form string="Units Information">
+                <sheet>
+                    <group>
+                          <group>
+                            <field name="name" required="True"/>
+                            <field name="unit_no" required="True"/>
+                            <field name="suit_area_size"/>
+                            <field name="common_area_size"/>
+                            <field name="approval_ref_no"/>
+                        </group>
+                        <group>
+                            <field name="Floor_no"/>
+                            <field name="status"/>
+                            <field name="total_area_size"/>
+                            <field name="reference_no"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+    </field>
+    </record>
+                </odoo>
