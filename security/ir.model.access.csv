@@ -1,0 +1,8 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+contract_manager.access_property_building,Access Property Building,model_property_building,base.group_user,1,1,1,1
+contract_manager.access_projecto_project_info,Access Project Info,model_projecto_project_info,base.group_user,1,1,1,1
+contract_manager.access_hold,access_hold,contract_manager.model_hold,base.group_user,1,1,1,1
+contract_manager.access_property_unit,Access The Property Units,contract_manager.model_property_unit,base.group_user,1,1,1,1
+contract_manager.access_property_contract,Access Property Contract,contract_manager.model_property_contract,base.group_user,1,1,1,1
+contract_manager.access_property_type,Access Property type,contract_manager.model_property_type,base.group_user,1,1,1,1
+contract_manager.access_property_stage,Access Property stage,contract_manager.model_property_stage,base.group_user,1,1,1,1
